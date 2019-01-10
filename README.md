@@ -49,6 +49,14 @@ Ant Design 组件库的 Angular 实现，开发和服务于企业级后台产品
 
 代码格式化工具，结合 husky hook 和 lint-staged 会在每次 git 提交代码前自动格式化代码。
 
+### tslint
+
+typescript 代码格式lint工具
+
+### stylelint
+
+css或者css预处理器格式lint工具
+
 ### lint-staged
 
 lint-staged 结合 tslint 和 stlyelint 会在 git 提交代码前对代码进行 lint fix。
@@ -60,7 +68,9 @@ lint-staged 结合 tslint 和 stlyelint 会在 git 提交代码前对代码进�
 
 ## 代码提交规范
 
-commit 分为 fix、feat、doc 三种：
+代码提交规范试用Gitflow规范
+
+commit内容形式 分为 fix、feat、doc 三种：
 
 * fix: 用于修复 bug ，例如： fix: remove unused dependcies.
 * feat: 用于添加新的功能或特性等，例如： feat: add login page.
