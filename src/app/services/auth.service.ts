@@ -3,6 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import {Observable, of} from 'rxjs';
 import { IToken } from '@shared/interfaces/token.interface';
 import 'rxjs/add/operator/mergeMap';
+import { mergeMap} from 'rxjs/operators';
 
 @Injectable()
 export class AuthService {
@@ -33,11 +34,12 @@ export class AuthService {
   }
 
   facebookSignIn(code: string): Observable<any> {
-    return this.httpClient.post('api/auth/facebook/signin', { code })
-      .flatMap((token: IToken) => {
+    return this.httpClient.post('api/auth/facebook/signin', { code }).pipe(
+      mergeMap((token: IToken) => {
         localStorage.setItem('token', token.token);
         return of(token);
-      }).pipe();
+      })
+    );
   }
 
   requestTwitterRedirectUri(): Observable<any> {

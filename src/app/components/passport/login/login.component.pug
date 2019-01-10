@@ -18,8 +18,8 @@ form(nz-form, [formGroup]='form', (ngSubmit)='submit()', role='form')
           nz-input-group(nzSize='large', nzPrefixIcon='anticon anticon-user')
             input(nz-input, formControlName='mobile', placeholder='mobile number')
           nz-form-explain(*ngIf='mobile.dirty && mobile.errors')
-            ng-container(*ngIf='mobile.errors.required') 请输入手机号！
-            ng-container(*ngIf='mobile.errors.pattern') 手机号格式错误！
+            ng-container(*ngIf='mobile.errors.required') 请输入手机号
+            ng-container(*ngIf='mobile.errors.pattern') 手机号格式错误
       nz-form-item
         nz-form-control
           nz-row([nzGutter]='8')
