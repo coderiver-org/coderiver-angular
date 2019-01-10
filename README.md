@@ -10,19 +10,7 @@ CodeRiver
 
 <div align="center">
 
-  一个。
-
-  <!-- [![Build Status](https://travis-ci.org/ng-alain/ng-alain.svg?branch=master)](https://travis-ci.org/ng-alain/ng-alain)
-  [![Dependency Status](https://david-dm.org/ng-alain/ng-alain/status.svg)](https://david-dm.org/ng-alain/ng-alain)
-  [![GitHub Release Date](https://img.shields.io/github/release-date/ng-alain/ng-alain.svg?style=flat-square)](https://github.com/ng-alain/ng-alain/releases)
-  [![NPM version](https://img.shields.io/npm/v/ng-alain.svg)](https://www.npmjs.com/package/ng-alain)
-  [![NPM version](https://img.shields.io/npm/v/ng-alain/next.svg)](https://www.npmjs.com/package/ng-alain)
-  [![prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://prettier.io/)
-  [![GitHub license](https://img.shields.io/github/license/mashape/apistatus.svg?style=flat-square)](https://github.com/ng-alain/ng-alain/blob/master/LICENSE)
-  [![Gitter](https://img.shields.io/gitter/room/ng-alain/ng-alain.svg?style=flat-square)](https://gitter.im/ng-alain/ng-alain)
-  [![extension-for-VSCode](https://img.shields.io/badge/extension%20for-VSCode-blue.svg?style=flat-square)](https://marketplace.visualstudio.com/items?itemName=cipchk.ng-alain-vscode)
-  [![Backers on Open Collective](https://opencollective.com/ng-alain/backers/badge.svg)](#backers)
-  [![Sponsors on Open Collective](https://opencollective.com/ng-alain/sponsors/badge.svg)](#sponsors) -->
+加入优秀的云端团队做一些有趣的事情。
 
 </div>
 
@@ -31,12 +19,52 @@ CodeRiver
 ## 快速开始
 
 ```bash
-npm install -g @angular/cli
 npm i
-ng serve
+ng run start
 ```
+## 技术栈
+
+### Angular
+
+前端框架
+
+### NG-ZORRO
+
+Ant Design 组件库的 Angular 实现，开发和服务于企业级后台产品。
+
+### Ng Alain
+
+基于 NG-ZORRO 的中后台前端解决方案，提供更多通用性业务模块，让开发者更加专注于业务。
+
+### Jest + Protractor
+
+单端测试框架Jest
+e2e测试框架Protractor
+参考：
+* [Angular + Jest + Wallabyjs why it is the ideal combination! And how to configure](https://blog.cloudboost.io/angular-jest-wallabyjs-why-it-is-the-ideal-combination-and-how-to-configure-b4cbe2eff4b3)
+* [Angular 6: “ng test” with Jest in 3 minutes](https://codeburst.io/angular-6-ng-test-with-jest-in-3-minutes-b1fe5ed3417c)
+
+### Prettier
+
+代码格式化工具，结合 husky hook 和 lint-staged 会在每次 git 提交代码前自动格式化代码。
+
+### lint-staged
+
+lint-staged 结合 tslint 和 stlyelint 会在 git 提交代码前对代码进行 lint fix。
+
+### codelyzer
+
+专门为 Angular TypeScript 提供的 lint 规则库。
 
 
-### License
+## 代码提交规范
+
+commit 分为 fix、feat、doc 三种
+
+* fix: 用于修复 bug ，例如： fix: remove unused dependcies.
+* feat: 用于添加新的功能或特性等，例如： feat: add login page.
+* doc: 用于更新文档，例如： doc: update description of project architecture.
+
+## License
 
 The MIT License (see the [LICENSE](https://github.com/coderiver-org/coderiver-angular/blob/master/LICENSE) file for the full text)

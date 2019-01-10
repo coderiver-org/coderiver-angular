@@ -81,6 +81,11 @@
     "typescript": "3.2.2",
     "webpack": "4.28.2"
   },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
   "lint-staged": {
     "linters": {
       "*.{cmd,html,json,md,sh,txt,xml,yml}": [
@@ -88,12 +93,12 @@
         "git add"
       ],
       "*.ts": [
-        "npm run lint:ts",
+        "ng lint --fix",
         "prettier --write",
         "git add"
       ],
       "*.less": [
-        "npm run lint:style",
+        "stylelint \"{src}/**/*.less\" --syntax less",
         "prettier --write",
         "git add"
       ],
