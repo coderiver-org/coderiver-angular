@@ -38,8 +38,9 @@ Ant Design 组件库的 Angular 实现，开发和服务于企业级后台产品
 
 ### Jest + Protractor
 
-单端测试框架Jest
-e2e测试框架Protractor
+* 单端测试框架Jest
+* e2e测试框架Protractor
+
 参考：
 * [Angular + Jest + Wallabyjs why it is the ideal combination! And how to configure](https://blog.cloudboost.io/angular-jest-wallabyjs-why-it-is-the-ideal-combination-and-how-to-configure-b4cbe2eff4b3)
 * [Angular 6: “ng test” with Jest in 3 minutes](https://codeburst.io/angular-6-ng-test-with-jest-in-3-minutes-b1fe5ed3417c)
@@ -59,11 +60,21 @@ lint-staged 结合 tslint 和 stlyelint 会在 git 提交代码前对代码进�
 
 ## 代码提交规范
 
-commit 分为 fix、feat、doc 三种
+commit 分为 fix、feat、doc 三种：
 
 * fix: 用于修复 bug ，例如： fix: remove unused dependcies.
 * feat: 用于添加新的功能或特性等，例如： feat: add login page.
 * doc: 用于更新文档，例如： doc: update description of project architecture.
+
+## npm 脚本说明
+
+* 本地调试: npm run start
+* 打包为静态文件: npm run build
+* 单元测试: npm run test
+* e2e测试： npm run e2e
+* 静态检查： npm run lint
+* 热更新方式调试： npm run hmr
+* 测试覆盖率: npm run test:coverage
 
 ## License
 

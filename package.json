@@ -7,7 +7,7 @@
     "start": "npm run color-less && ng serve --proxy-config proxy.conf.json  --host 0.0.0.0 -o",
     "build": "npm run color-less && ng build --prod --build-optimizer",
     "test": "ng test",
-    "lint": "npm run lint:style",
+    "lint": "npm run lint:ts && npm run lint:style",
     "e2e": "ng e2e",
     "postinstall": "node ./scripts/pug-rule-insert.js",
     "color-less": "node scripts/color-less.js",
