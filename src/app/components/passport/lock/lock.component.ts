@@ -5,8 +5,8 @@ import { SettingsService } from '@delon/theme';
 
 @Component({
   selector: 'passport-lock',
-  templateUrl: './lock.component.pug',
-  styleUrls: [ './lock.component.less' ]
+  templateUrl: './lock.component.html',
+  styleUrls: ['./lock.component.less']
 })
 export class UserLockComponent {
   f: FormGroup;
@@ -14,10 +14,10 @@ export class UserLockComponent {
   constructor(
     fb: FormBuilder,
     public settings: SettingsService,
-    private router: Router,
+    private router: Router
   ) {
     this.f = fb.group({
-      password: [null, Validators.required],
+      password: [null, Validators.required]
     });
   }
 

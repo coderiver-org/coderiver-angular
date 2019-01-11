@@ -3,8 +3,8 @@ import { Component, Input, HostBinding } from '@angular/core';
 @Component({
   // tslint:disable-next-line:component-selector
   selector: 'setting-drawer-item',
-  templateUrl: './setting-drawer-item.component.pug',
-  preserveWhitespaces: false,
+  templateUrl: './setting-drawer-item.component.html',
+  preserveWhitespaces: false
 })
 export class SettingDrawerItemComponent {
   i: any = {};

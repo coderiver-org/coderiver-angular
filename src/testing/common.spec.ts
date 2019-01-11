@@ -9,12 +9,11 @@ import {
   SettingsService,
   MenuService,
   ScrollService,
-  _HttpClient,
+  _HttpClient
 } from '@delon/theme';
 import { DelonAuthModule } from '@delon/auth';
 import { CoreModule } from '@core/core.module';
 import { SharedModule } from '@shared/shared.module';
-
 
 import { DelonModule } from '../app/delon.module';
 
@@ -43,7 +42,7 @@ export const setUpTestBed = (moduleDef: TestModuleMetadata) => {
       moduleDef.imports.push(DelonModule);
       moduleDef.imports.push(SharedModule);
       // auth
-      moduleDef.imports.push(DelonAuthModule.forRoot());
+      moduleDef.imports.push(DelonAuthModule);
 
       if (!moduleDef.providers) {
         moduleDef.providers = [];
@@ -55,7 +54,7 @@ export const setUpTestBed = (moduleDef: TestModuleMetadata) => {
             return;
           }
           moduleDef.providers.push(item);
-        },
+        }
       );
 
       TestBed.configureTestingModule(moduleDef);
@@ -65,7 +64,8 @@ export const setUpTestBed = (moduleDef: TestModuleMetadata) => {
       TestBed.resetTestingModule = () => TestBed;
     })()
       .then(done)
-      .catch(done.fail));
+      .catch(done.fail)
+  );
 
   afterAll(() => allowAngularToReset());
 };

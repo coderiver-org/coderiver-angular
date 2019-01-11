@@ -2,7 +2,7 @@ import { Component, HostBinding } from '@angular/core';
 
 @Component({
   selector: 'layout-fullscreen',
-  templateUrl: './fullscreen.component.pug',
+  templateUrl: './fullscreen.component.html'
 })
 export class LayoutFullScreenComponent {
   @HostBinding('class')

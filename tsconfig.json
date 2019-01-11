@@ -2,6 +2,7 @@
   "compileOnSave": false,
   "compilerOptions": {
     "baseUrl": "src/",
+    "importHelpers": true,
     "outDir": "./dist/out-tsc",
     "sourceMap": true,
     "declaration": false,
@@ -67,13 +68,5 @@
         "app/layout/*"
       ]
     }
-  },
-  "exclude": [
-    "node_modules"
-  ],
-  "include": [
-    "src/client/**/*.ts",
-    "src/server/**/*.ts",
-    "src/shared/**/*.ts",
-  ]
+  }
 }

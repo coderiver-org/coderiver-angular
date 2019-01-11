@@ -9,12 +9,10 @@
     "test": "ng test",
     "lint": "npm run lint:ts && npm run lint:style",
     "e2e": "ng e2e",
-    "postinstall": "node ./scripts/pug-rule-insert.js",
     "color-less": "node scripts/color-less.js",
     "lint:ts": "ng lint",
     "lint:style": "stylelint \"{src}/**/*.less\" --syntax less",
     "lint-staged": "lint-staged",
-    "tslint-check": "tslint-config-prettier-check ./tslint.json",
     "hmr": "npm run color-less && ng serve -c=hmr",
     "test:coverage": "jest --runInBand --coverage",
     "test:snapshot": "jest --coverage -u",
@@ -44,6 +42,7 @@
     "ng-zorro-antd": "7.0.0-rc.3",
     "rxjs": "6.3.3",
     "screenfull": "4.0.0",
+    "tslib": "1.9.3",
     "zone.js": "0.8.26"
   },
   "devDependencies": {
@@ -71,15 +70,12 @@
     "prettier": "1.15.3",
     "prettier-stylelint": "0.4.2",
     "protractor": "5.4.2",
-    "pug": "2.0.3",
-    "pug-jest": "1.0.1",
-    "pug-loader": "2.4.0",
     "stylelint": "9.9.0",
     "stylelint-config-prettier": "4.0.0",
     "ts-node": "7.0.1",
-    "tslint": "5.12.0",
+    "tslint": "5.12.1",
     "typescript": "3.2.2",
-    "webpack": "4.28.2"
+    "webpack": "4.28.4"
   },
   "husky": {
     "hooks": {
@@ -93,12 +89,12 @@
         "git add"
       ],
       "*.ts": [
-        "ng lint --fix",
+        "tslint --fix",
         "prettier --write",
         "git add"
       ],
       "*.less": [
-        "stylelint \"{src}/**/*.less\" --syntax less",
+        "stylelint --fix --syntax less",
         "prettier --write",
         "git add"
       ],

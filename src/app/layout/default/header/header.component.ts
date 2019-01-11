@@ -3,7 +3,7 @@ import { SettingsService } from '@delon/theme';
 
 @Component({
   selector: 'layout-header',
-  templateUrl: './header.component.pug',
+  templateUrl: './header.component.html'
 })
 export class HeaderComponent {
   searchToggleStatus: boolean;

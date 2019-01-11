@@ -9,7 +9,7 @@ import {
   OnDestroy,
   ElementRef,
   Renderer2,
-  Inject,
+  Inject
 } from '@angular/core';
 import { DOCUMENT } from '@angular/common';
 import {
@@ -17,7 +17,7 @@ import {
   NavigationEnd,
   RouteConfigLoadStart,
   NavigationError,
-  NavigationCancel,
+  NavigationCancel
 } from '@angular/router';
 import { NzMessageService, NzIconService } from 'ng-zorro-antd';
 import { Subscription } from 'rxjs';
@@ -43,7 +43,7 @@ import {
   ArrowDownOutline,
   // Optional
   GithubOutline,
-  AppstoreOutline,
+  AppstoreOutline
 } from '@ant-design/icons-angular/icons';
 
 const ICONS = [
@@ -63,7 +63,7 @@ const ICONS = [
   ArrowDownOutline,
   // Optional
   GithubOutline,
-  AppstoreOutline,
+  AppstoreOutline
 ];
 
 // #endregion
@@ -73,9 +73,8 @@ import { SettingDrawerComponent } from './setting-drawer/setting-drawer.componen
 
 @Component({
   selector: 'layout-default',
-  templateUrl: './default.component.pug',
-  preserveWhitespaces: false,
-
+  templateUrl: './default.component.html',
+  preserveWhitespaces: false
 })
 export class LayoutDefaultComponent
   implements OnInit, AfterViewInit, OnDestroy {
@@ -96,7 +95,7 @@ export class LayoutDefaultComponent
     public settings: SettingsService,
     private el: ElementRef,
     private renderer: Renderer2,
-    @Inject(DOCUMENT) private doc: any,
+    @Inject(DOCUMENT) private doc: any
   ) {
     iconSrv.addIcon(...ICONS);
     // scroll to top in change page
@@ -131,9 +130,9 @@ export class LayoutDefaultComponent
         ['alain-default']: true,
         [`alain-default__fixed`]: layout.fixed,
         [`alain-default__boxed`]: layout.boxed,
-        [`alain-default__collapsed`]: layout.collapsed,
+        [`alain-default__collapsed`]: layout.collapsed
       },
-      true,
+      true
     );
 
     this.doc.body.classList[layout.colorWeak ? 'add' : 'remove']('color-weak');
@@ -144,7 +143,7 @@ export class LayoutDefaultComponent
     if (!environment.production) {
       setTimeout(() => {
         const settingFactory = this.resolver.resolveComponentFactory(
-          SettingDrawerComponent,
+          SettingDrawerComponent
         );
         this.settingHost.createComponent(settingFactory);
       }, 22);

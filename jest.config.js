@@ -8,8 +8,7 @@ module.exports = {
   testMatch: ['**/__tests__/**/*.+(ts|js)?(x)', '**/+(*.)+(spec|test).+(ts|js)?(x)'],
   setupTestFrameworkScriptFile: '<rootDir>/node_modules/@angular-builders/jest/src/jest-config/setup.js',
   transform: {
-    '^.+\\.(ts|html)$': '<rootDir>/node_modules/jest-preset-angular/preprocessor.js',
-    '\\.(pug)$': '<rootDir>/node_modules/pug-jest'
+    '^.+\\.(ts|html)$': '<rootDir>/node_modules/jest-preset-angular/preprocessor.js'
   },
   transformIgnorePatterns: ['node_modules/(?!@ngrx)'],
   moduleDirectories: [

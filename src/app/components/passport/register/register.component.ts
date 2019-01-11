@@ -4,22 +4,22 @@ import {
   FormGroup,
   FormBuilder,
   Validators,
-  FormControl,
+  FormControl
 } from '@angular/forms';
 import { NzMessageService } from 'ng-zorro-antd';
 import { _HttpClient } from '@delon/theme';
 
 @Component({
   selector: 'passport-register',
-  templateUrl: './register.component.pug',
-  styleUrls: ['./register.component.less'],
+  templateUrl: './register.component.html',
+  styleUrls: ['./register.component.less']
 })
 export class UserRegisterComponent implements OnDestroy {
   constructor(
     fb: FormBuilder,
     private router: Router,
     public http: _HttpClient,
-    public msg: NzMessageService,
+    public msg: NzMessageService
   ) {
     this.form = fb.group({
       mail: [null, [Validators.required, Validators.email]],
@@ -28,20 +28,20 @@ export class UserRegisterComponent implements OnDestroy {
         [
           Validators.required,
           Validators.minLength(6),
-          UserRegisterComponent.checkPassword.bind(this),
-        ],
+          UserRegisterComponent.checkPassword.bind(this)
+        ]
       ],
       confirm: [
         null,
         [
           Validators.required,
           Validators.minLength(6),
-          UserRegisterComponent.passwordEquar,
-        ],
+          UserRegisterComponent.passwordEquar
+        ]
       ],
       mobilePrefix: ['+86'],
       mobile: [null, [Validators.required, Validators.pattern(/^1\d{10}$/)]],
-      captcha: [null, [Validators.required]],
+      captcha: [null, [Validators.required]]
     });
   }
 
@@ -71,7 +71,7 @@ export class UserRegisterComponent implements OnDestroy {
   passwordProgressMap = {
     ok: 'success',
     pass: 'normal',
-    pool: 'exception',
+    pool: 'exception'
   };
 
   // #endregion
@@ -143,7 +143,7 @@ export class UserRegisterComponent implements OnDestroy {
     const data = this.form.value;
     this.http.post('/register', data).subscribe(() => {
       this.router.navigateByUrl('/passport/register-result', {
-        queryParams: { email: data.mail },
+        queryParams: { email: data.mail }
       });
     });
   }

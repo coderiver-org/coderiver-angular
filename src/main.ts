@@ -14,20 +14,22 @@ if (environment.production) {
 }
 
 const bootstrap = () => {
-  return platformBrowserDynamic().bootstrapModule(AppModule, {
-    defaultEncapsulation: ViewEncapsulation.Emulated,
-    preserveWhitespaces: false,
-  }).then((res) => {
-    if ((<any>window).appBootstrap) {
-      (<any>window).appBootstrap();
-    }
-    return res;
-  });
+  return platformBrowserDynamic()
+    .bootstrapModule(AppModule, {
+      defaultEncapsulation: ViewEncapsulation.Emulated,
+      preserveWhitespaces: false
+    })
+    .then(res => {
+      if ((<any>window).appBootstrap) {
+        (<any>window).appBootstrap();
+      }
+      return res;
+    });
 };
 
 if (environment.hmr) {
-   const nodeModule = module as any;
-  if (nodeModule[ 'hot' ]) {
+  const nodeModule = module as any;
+  if (nodeModule['hot']) {
     hmrBootstrap(module, bootstrap);
   } else {
     console.error('HMR is not enabled for webpack-dev-server!');
