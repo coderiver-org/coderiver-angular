@@ -15,11 +15,13 @@ import { Exception404Component } from './exception/404.component';
 import { Exception500Component } from './exception/500.component';
 import { HomePageComponent } from '@components/homepage/home-page.component';
 import { ExcellentProjectComponent } from '@components/homepage/excellent-project/excellent-project.component';
+import { HomeCarouselComponent } from '@components/homepage/home-carousel/home-carousel.component';
 
 const COMPONENTS = [
   DashboardComponent,
   HomePageComponent,
   ExcellentProjectComponent,
+  HomeCarouselComponent,
   // passport pages
   UserLoginComponent,
   UserRegisterComponent,
