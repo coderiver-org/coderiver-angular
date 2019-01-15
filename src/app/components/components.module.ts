@@ -16,12 +16,16 @@ import { Exception500Component } from './exception/500.component';
 import { HomePageComponent } from '@components/homepage/home-page.component';
 import { ExcellentProjectComponent } from '@components/homepage/excellent-project/excellent-project.component';
 import { HomeCarouselComponent } from '@components/homepage/home-carousel/home-carousel.component';
+import { TitleLineComponent } from '@components/homepage/title-line/title-line.component';
+import { GoodItemComponent } from '@components/homepage/goot-item/good-item.component';
 
 const COMPONENTS = [
   DashboardComponent,
   HomePageComponent,
   ExcellentProjectComponent,
   HomeCarouselComponent,
+  GoodItemComponent,
+  TitleLineComponent,
   // passport pages
   UserLoginComponent,
   UserRegisterComponent,

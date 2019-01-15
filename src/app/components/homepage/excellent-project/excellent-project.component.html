@@ -1,9 +1,5 @@
 <div class="project">
-	<div class="project-line"></div>
-	<div class="project-title">
-		<span class="project-title__left">优秀项目推荐</span>
-		<span class="project-title__right" (click)="toProjectCenter()">查看更多</span>
-	</div>
+	<page-title-line title="优秀项目推荐" color="#40aea8" [clickFunc]="toProjectCenter"></page-title-line>
 	<div class="project-content">
 		<div *ngFor="let item of projects" class="project-content__item">
 			<img class="project-content__item-img"

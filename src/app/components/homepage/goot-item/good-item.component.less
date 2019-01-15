@@ -1,0 +1,62 @@
+.container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+
+  &-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 25%;
+    padding: 2%;
+    color: #18262a;
+    cursor: pointer;
+
+    &__header {
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-image: url('../../../../assets/icon/home/头像-圈圈.png');
+      width: 100%;
+      padding-top: 100%;
+      position: relative;
+
+      &-img {
+        top: 6%;
+        left: 6%;
+        position: absolute;
+        max-width: 88%;
+        max-height: 88%;
+      }
+    }
+
+    &-first {
+      font-size: 17px;
+    }
+
+    &-second {
+      font-size: 9px;
+    }
+
+    &-intro {
+      font-size: 9px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      width: 100%;
+    }
+  }
+
+  &-item:hover {
+    box-shadow: 0px 4px 5px 1px rgba(0, 0, 0, 0.3);
+
+    .container-item-intro {
+      white-space: unset;
+      display: -webkit-box; //必须结合的属性 ，将对象作为弹性伸缩盒子模型显示 。
+      //-webkit-box-orient; //必须结合的属性 ，设置或检索伸缩盒对象的子元素的排列方式 。
+      text-overflow: ellipsis; //可以用来多行文本的情况下，用省略号“…”隐藏超出范围的文本 。
+      overflow: hidden;
+      -webkit-line-clamp: 5;
+      -webkit-box-orient: vertical;
+    }
+  }
+}
