@@ -1,0 +1,93 @@
+.project {
+  &-line {
+    width: 100%;
+    height: 2px;
+    background-color: #40aea8;
+  }
+
+  &-title {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 110px;
+
+    &__left {
+      font-size: 20px;
+    }
+
+    &__right {
+      font-size: 15px;
+      color: #40aea8;
+      cursor: pointer;
+    }
+  }
+
+  &-content {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    &__item {
+      width: 50%;
+      padding: 2.5%;
+      display: flex;
+      flex-direction: column;
+
+      &-img {
+        max-width: 100%;
+      }
+
+      .text-one {
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+      }
+
+      &-name {
+        .text-one;
+        margin-top: 13px;
+        font-size: 15px;
+        color: #18262a;
+      }
+
+      &-intro {
+        .text-one;
+        margin-top: 7px;
+        font-size: 10px;
+        color: #999999;
+      }
+
+      &-operate {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+
+        .icon-common {
+          display: inline-block;
+          background-repeat: no-repeat;
+          background-size: contain;
+          width: 18px;
+          height: 12px;
+          cursor: pointer;
+        }
+
+        .icon-watch {
+          .icon-common;
+          background-image: url('../../../../assets/icon/home/浏览icon.png');
+        }
+
+        .icon-praise {
+          .icon-common;
+          height: 15px;
+          background-image: url('../../../../assets/icon/home/点赞icon.png');
+          margin-left: 20px;
+        }
+      }
+    }
+
+    &__item:hover {
+      box-shadow: 1px 3px 5px 1px rgba(0, 0, 0, 0.3);
+    }
+  }
+}

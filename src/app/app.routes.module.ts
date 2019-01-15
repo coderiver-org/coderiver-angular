@@ -18,39 +18,71 @@ import { UserLockComponent } from '@components/passport/lock/lock.component';
 import { Exception403Component } from '@components/exception/403.component';
 import { Exception404Component } from '@components/exception/404.component';
 import { Exception500Component } from '@components/exception/500.component';
+import { HomeComponent } from '@layout/home/home.component';
+import { HomePageComponent } from '@components/homepage/home-page.component';
 
 const routes: Routes = [
+  // 以后应该能用到
+  // {
+  //   path: '',
+  //   component: LayoutDefaultComponent,
+  //   // canActivate: [SimpleGuard],
+  //   children: [
+  //     { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
+  //     { path: 'dashboard', component: DashboardComponent, data: { title: '仪表盘', titleI18n: 'dashboard' } },
+  //     // 业务子模块
+  //     // { path: 'widgets', loadChildren: './widgets/widgets.module#WidgetsModule' }
+  //   ]
+  // },
   {
     path: '',
-    component: LayoutDefaultComponent,
-    canActivate: [SimpleGuard],
+    component: HomeComponent,
     children: [
-      { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
-      { path: 'dashboard', component: DashboardComponent, data: { title: '仪表盘', titleI18n: 'dashboard' } },
+      { path: '', redirectTo: 'home', pathMatch: 'full' },
+      {
+        path: 'home',
+        component: HomePageComponent,
+        data: { title: '仪表盘', titleI18n: 'dashboard' }
+      }
       // 业务子模块
       // { path: 'widgets', loadChildren: './widgets/widgets.module#WidgetsModule' }
     ]
   },
   // 全屏布局
-  // {
-  //     path: 'fullscreen',
-  //     component: LayoutFullScreenComponent,
-  //     children: [
-  //     ]
-  // },
+  {
+    path: 'fullscreen',
+    component: LayoutFullScreenComponent,
+    children: []
+  },
   // passport
   {
     path: 'passport',
     component: LayoutPassportComponent,
     children: [
-      { path: 'login', component: UserLoginComponent, data: { title: '登录', titleI18n: 'pro-login' } },
-      { path: 'register', component: UserRegisterComponent, data: { title: '注册', titleI18n: 'pro-register' } },
-      { path: 'register-result', component: UserRegisterResultComponent, data: { title: '注册结果', titleI18n: 'pro-register-result' } }
+      {
+        path: 'login',
+        component: UserLoginComponent,
+        data: { title: '登录', titleI18n: 'pro-login' }
+      },
+      {
+        path: 'register',
+        component: UserRegisterComponent,
+        data: { title: '注册', titleI18n: 'pro-register' }
+      },
+      {
+        path: 'register-result',
+        component: UserRegisterResultComponent,
+        data: { title: '注册结果', titleI18n: 'pro-register-result' }
+      }
     ]
   },
   // 单页不包裹Layout
   { path: 'callback/:type', component: CallbackComponent },
-  { path: 'lock', component: UserLockComponent, data: { title: '锁屏', titleI18n: 'lock' } },
+  {
+    path: 'lock',
+    component: UserLockComponent,
+    data: { title: '锁屏', titleI18n: 'lock' }
+  },
   { path: '403', component: Exception403Component },
   { path: '404', component: Exception404Component },
   { path: '500', component: Exception500Component },
@@ -61,4 +93,4 @@ const routes: Routes = [
   imports: [RouterModule.forRoot(routes, { useHash: environment.useHash })],
   exports: [RouterModule]
 })
-export class RoutesModule { }
+export class RoutesModule {}

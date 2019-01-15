@@ -25,7 +25,11 @@ const COMPONENTS = [
   SidebarComponent,
   ...SETTINGDRAWER
 ];
-
+const HOME_COMPONENTS = [
+  HomeComponent,
+  HomeHeaderComponent,
+  HomeFooterComponent
+];
 const HEADERCOMPONENTS = [
   HeaderSearchComponent,
   HeaderNotifyComponent,
@@ -38,9 +42,11 @@ const HEADERCOMPONENTS = [
 
 // passport
 import { LayoutPassportComponent } from './passport/passport.component';
-const PASSPORT = [
-  LayoutPassportComponent
-];
+import { HomeHeaderComponent } from '@layout/home/header/home-header.component';
+import { HomeFooterComponent } from '@layout/home/footer/home-footer.component';
+import { HomeComponent } from '@layout/home/home.component';
+
+const PASSPORT = [LayoutPassportComponent];
 
 @NgModule({
   imports: [SharedModule],
@@ -48,11 +54,9 @@ const PASSPORT = [
   declarations: [
     ...COMPONENTS,
     ...HEADERCOMPONENTS,
-    ...PASSPORT
+    ...PASSPORT,
+    ...HOME_COMPONENTS
   ],
-  exports: [
-    ...COMPONENTS,
-    ...PASSPORT
-  ]
+  exports: [...COMPONENTS, ...PASSPORT]
 })
-export class LayoutModule { }
+export class LayoutModule {}

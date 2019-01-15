@@ -13,9 +13,13 @@ import { UserLockComponent } from './passport/lock/lock.component';
 import { Exception403Component } from './exception/403.component';
 import { Exception404Component } from './exception/404.component';
 import { Exception500Component } from './exception/500.component';
+import { HomePageComponent } from '@components/homepage/home-page.component';
+import { ExcellentProjectComponent } from '@components/homepage/excellent-project/excellent-project.component';
 
 const COMPONENTS = [
   DashboardComponent,
+  HomePageComponent,
+  ExcellentProjectComponent,
   // passport pages
   UserLoginComponent,
   UserRegisterComponent,
@@ -30,11 +34,8 @@ const COMPONENTS = [
 const COMPONENTS_NOROUNT: any[] = [];
 
 @NgModule({
-  imports: [ SharedModule],
-  declarations: [
-    ...COMPONENTS,
-    ...COMPONENTS_NOROUNT
-  ],
+  imports: [SharedModule],
+  declarations: [...COMPONENTS, ...COMPONENTS_NOROUNT],
   entryComponents: COMPONENTS_NOROUNT
 })
 export class ComponentsModule {}

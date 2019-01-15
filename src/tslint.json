@@ -21,7 +21,8 @@
         "passport",
         "exception",
         "layout",
-        "header"
+        "header",
+        "page"
       ],
       "kebab-case"
     ]
