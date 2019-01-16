@@ -18,6 +18,7 @@ import { ExcellentProjectComponent } from '@components/homepage/excellent-projec
 import { HomeCarouselComponent } from '@components/homepage/home-carousel/home-carousel.component';
 import { TitleLineComponent } from '@components/homepage/title-line/title-line.component';
 import { GoodItemComponent } from '@components/homepage/goot-item/good-item.component';
+import { FastJoinComponent } from '@components/homepage/fast-join/fast-join.component';
 
 const COMPONENTS = [
   DashboardComponent,
@@ -25,6 +26,7 @@ const COMPONENTS = [
   ExcellentProjectComponent,
   HomeCarouselComponent,
   GoodItemComponent,
+  FastJoinComponent,
   TitleLineComponent,
   // passport pages
   UserLoginComponent,
