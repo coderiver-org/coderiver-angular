@@ -19,6 +19,7 @@ import { HomeCarouselComponent } from '@components/homepage/home-carousel/home-c
 import { TitleLineComponent } from '@components/homepage/title-line/title-line.component';
 import { GoodItemComponent } from '@components/homepage/goot-item/good-item.component';
 import { FastJoinComponent } from '@components/homepage/fast-join/fast-join.component';
+import { DownloadAppComponent } from './homepage/download/download-app.component';
 
 const COMPONENTS = [
   DashboardComponent,
@@ -28,6 +29,7 @@ const COMPONENTS = [
   GoodItemComponent,
   FastJoinComponent,
   TitleLineComponent,
+  DownloadAppComponent,
   // passport pages
   UserLoginComponent,
   UserRegisterComponent,

@@ -1,0 +1,48 @@
+.download {
+  background-image: url('../../../../assets/icon/home/back.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: right;
+  width: 100%;
+  padding-top: 50%;
+  position: relative;
+
+  &-app {
+    position: absolute;
+    top: 20%;
+    width: 100%;
+
+    &-android,
+    &-ios,
+    &-code-android,
+    &-code-ios {
+      max-width: 25%;
+      cursor: pointer;
+    }
+
+    &-ios,
+    &-code-ios {
+      margin-left: 5%;
+    }
+
+    &-code-ios,
+    &-code-android {
+      visibility: hidden;
+      padding: 10px;
+      border: 1px solid;
+      border-top: none;
+    }
+
+    &-android:hover ~ .download-app-code {
+      .download-app-code-android {
+        visibility: unset;
+      }
+    }
+
+    &-ios:hover ~ .download-app-code {
+      .download-app-code-ios {
+        visibility: unset;
+      }
+    }
+  }
+}

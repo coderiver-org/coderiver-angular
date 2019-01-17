@@ -6,7 +6,8 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./title-line.component.less']
 })
 export class TitleLineComponent {
-  @Input() title: String = '';
-  @Input() color: String = '#40aea8';
+  @Input() title = '';
+  @Input() color = '#40aea8';
+  @Input() action = '查看更多';
   @Input() clickFunc: Function = () => {};
 }
