@@ -10,35 +10,35 @@
       "prefix": "app",
       "schematics": {
         "@schematics/angular:component": {
-          "styleext": "less"
+          "styleext": "scss"
         }
       },
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist",
+            "outputPath": "dist/coderiver-angular",
             "index": "src/index.html",
             "main": "src/main.ts",
-            "tsConfig": "src/tsconfig.app.json",
             "polyfills": "src/polyfills.ts",
+            "tsConfig": "src/tsconfig.app.json",
             "assets": [
-              "src/assets",
-              "src/favicon.ico"
+              "src/favicon.ico",
+              "src/assets"
             ],
             "styles": [
-              "src/styles.less"
+              "src/styles.scss"
             ],
-            "scripts": [
-              "node_modules/ajv/dist/ajv.bundle.js"
-            ]
+            "scripts": []
           },
           "configurations": {
             "production": {
-              "fileReplacements": [{
-                "replace": "./src/environments/environment.ts",
-                "with": "./src/environments/environment.prod.ts"
-              }],
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/environment.prod.ts"
+                }
+              ],
               "optimization": true,
               "outputHashing": "all",
               "sourceMap": false,
@@ -48,17 +48,13 @@
               "extractLicenses": true,
               "vendorChunk": false,
               "buildOptimizer": true,
-              "budgets": [{
-                "type": "initial",
-                "maximumWarning": "2mb",
-                "maximumError": "5mb"
-              }]
-            },
-            "hmr": {
-              "fileReplacements": [{
-                "replace": "src/environments/environment.ts",
-                "with": "src/environments/environment.hmr.ts"
-              }]
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                }
+              ]
             }
           }
         },
@@ -70,10 +66,6 @@
           "configurations": {
             "production": {
               "browserTarget": "coderiver-angular:build:production"
-            },
-            "hmr": {
-              "browserTarget": "coderiver-angular:build:hmr",
-              "hmr": true
             }
           }
         },
@@ -84,9 +76,20 @@
           }
         },
         "test": {
-          "builder": "@angular-builders/jest:run",
+          "builder": "@angular-devkit/build-angular:karma",
           "options": {
-            "no-cache": true
+            "main": "src/test.ts",
+            "polyfills": "src/polyfills.ts",
+            "tsConfig": "src/tsconfig.spec.json",
+            "karmaConfig": "src/karma.conf.js",
+            "styles": [
+              "src/styles.scss"
+            ],
+            "scripts": [],
+            "assets": [
+              "src/favicon.ico",
+              "src/assets"
+            ]
           }
         },
         "lint": {
@@ -106,11 +109,12 @@
     "coderiver-angular-e2e": {
       "root": "e2e/",
       "projectType": "application",
+      "prefix": "",
       "architect": {
         "e2e": {
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
-            "protractorConfig": "protractor.conf.js",
+            "protractorConfig": "e2e/protractor.conf.js",
             "devServerTarget": "coderiver-angular:serve"
           },
           "configurations": {
@@ -131,44 +135,5 @@
       }
     }
   },
-  "defaultProject": "coderiver-angular",
-  "schematics": {
-    "ng-alain:module": {
-      "routing": true,
-      "spec": false
-    },
-    "ng-alain:list": {
-      "spec": false
-    },
-    "ng-alain:edit": {
-      "spec": false,
-      "modal": true
-    },
-    "ng-alain:view": {
-      "spec": false,
-      "modal": true
-    },
-    "ng-alain:curd": {
-      "spec": false
-    },
-    "@schematics/angular:module": {
-      "routing": true,
-      "spec": false
-    },
-    "@schematics/angular:component": {
-      "prefix": "app",
-      "styleext": "less",
-      "spec": false,
-      "flat": false,
-      "inlineStyle": true,
-      "inlineTemplate": false
-    },
-    "@schematics/angular:directive": {
-      "prefix": "app",
-      "spec": false
-    },
-    "@schematics/angular:service": {
-      "spec": false
-    }
-  }
+  "defaultProject": "coderiver-angular"
 }

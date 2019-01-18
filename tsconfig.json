@@ -1,72 +1,22 @@
 {
   "compileOnSave": false,
   "compilerOptions": {
-    "baseUrl": "src/",
-    "importHelpers": true,
+    "baseUrl": "./",
     "outDir": "./dist/out-tsc",
     "sourceMap": true,
     "declaration": false,
-    "module": "es2015",
+    "module": "esnext",
     "moduleResolution": "node",
-    "allowSyntheticDefaultImports": true,
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
-    "noImplicitAny": true,
-    "removeComments": true,
+    "importHelpers": true,
     "target": "es5",
-    "types": ["jest"],
     "typeRoots": [
       "node_modules/@types"
     ],
     "lib": [
-      "es2016",
-      "es2017",
       "es2018",
       "dom"
-    ],
-    "paths": {
-      "@shared": [
-        "app/shared"
-      ],
-      "@shared/*": [
-        "app/shared/*"
-      ],
-      "@core": [
-        "app/core"
-      ],
-      "@core/*": [
-        "app/core/*"
-      ],
-      "@testing": [
-        "testing"
-      ],
-      "@testing/*": [
-        "testing/*"
-      ],
-      "@env": [
-        "environments"
-      ],
-      "@env/*": [
-        "environments/*"
-      ],
-      "@components": [
-        "app/components"
-      ],
-      "@components/*": [
-        "app/components/*"
-      ],
-      "@services": [
-        "app/services"
-      ],
-      "@services/*": [
-        "app/services/*"
-      ],
-      "@layout": [
-        "app/layout"
-      ],
-      "@layout/*": [
-        "app/layout/*"
-      ]
-    }
+    ]
   }
 }
