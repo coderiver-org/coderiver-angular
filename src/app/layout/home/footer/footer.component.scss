@@ -1,0 +1,24 @@
+:host {
+  display: flex;
+  padding: 32px;
+
+  .left {
+    width: 700px;
+    .logo {
+      width: 214px;
+      img {
+        width: 100%;
+      }
+    }
+    .introduction {
+      margin-top: 35px;
+      width: 600px;
+      p {
+        margin: 0;
+      }
+    }
+    .copyright {
+      margin-top: 20px;
+    }
+  }
+}

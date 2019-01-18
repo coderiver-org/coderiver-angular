@@ -1,0 +1,15 @@
+:host {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+
+  .container {
+    width: 100%;
+    max-width: 1200px;
+  }
+}
+
+mat-grid-tile {
+  background: lightblue;
+}
