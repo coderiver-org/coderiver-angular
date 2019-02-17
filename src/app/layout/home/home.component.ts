@@ -1,21 +1,10 @@
 import { Component } from '@angular/core';
-import {
-  BreakpointObserver,
-  Breakpoints,
-  BreakpointState
-} from '@angular/cdk/layout';
 
 @Component({
-  selector: 'layout-home',
-  templateUrl: './home.component.html',
-  styleUrls: ['./home.component.scss']
+  selector: 'ng-home',
+  template: `
+    <i nz-icon [type]="'home'"></i>
+    <i nz-icon type="apple" theme="outline"></i>
+  `
 })
-export class LayoutHomeComponent {
-  title = 'home';
-
-  constructor(breakpointObserver: BreakpointObserver) {}
-
-  activateHandsetLayout(result: BreakpointState): void {
-    console.log(result);
-  }
-}
+export class HomeComponent {}

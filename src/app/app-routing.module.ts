@@ -1,17 +1,15 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { LayoutHomeComponent } from './layout/home/home.component';
-import { LayoutPassportComponent } from './layout/passport/passport.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
   {
-    path: 'passport',
-    component: LayoutPassportComponent
+    path: 'home',
+    loadChildren: './layout/home/home.module#HomeModule'
   },
   {
-    path: 'home',
-    component: LayoutHomeComponent
+    path: 'passport',
+    loadChildren: './layout/passport/passport.module#PassportModule'
   }
 ];
 
