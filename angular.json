@@ -10,7 +10,7 @@
       "prefix": "app",
       "schematics": {
         "@schematics/angular:component": {
-          "styleext": "scss"
+          "styleext": "less"
         }
       },
       "architect": {
@@ -31,7 +31,7 @@
                 "output": "/assets/"
               }
             ],
-            "styles": ["src/theme.less", "node_modules/normalize.css/normalize.css", "src/styles.less"],
+            "styles": ["src/theme.less", "node_modules/normalize.css/normalize.css", "src/app/styles/styles.less"],
             "scripts": []
           },
           "configurations": {

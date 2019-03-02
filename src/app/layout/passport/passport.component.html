@@ -1,0 +1,34 @@
+<div class="cr-passport-container">
+  <div class="sign-card">
+    <div class="sign-card-header">
+      <div class="logo"><img src="/assets/imgs/logo.png" alt="" /></div>
+      <div class="title">欢迎登录CodeRiver</div>
+    </div>
+    <div class="sign-card-content">
+      <form nz-form>
+        <nz-form-item>
+          <nz-input-group [nzPrefix]="prefixUser" nzSize="large">
+            <input nz-input name="username" type="text" placeholder="username" />
+          </nz-input-group>
+        </nz-form-item>
+        <nz-form-item>
+          <nz-input-group [nzPrefix]="prefixLock" nzSize="large">
+            <input nz-input name="password" type="password" placeholder="password" />
+          </nz-input-group>
+        </nz-form-item>
+        <nz-form-item>
+          <div class="login-form-operation">
+            <label nz-checkbox formControlName="remember">
+              <span>Remember me</span>
+            </label>
+            <a class="login-form-forgot">Forgot password</a>
+          </div>
+          <button nz-button nzSize="large" class="login-form-button" nzType="primary">Log in</button>
+        </nz-form-item>
+      </form>
+    </div>
+    <div class="sign-card-footer">已有帐号？<a>登录</a></div>
+  </div>
+</div>
+<ng-template #prefixUser><i nz-icon type="user"></i></ng-template>
+<ng-template #prefixLock><i nz-icon type="lock"></i></ng-template>

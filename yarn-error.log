@@ -1,0 +1,86 @@
+Arguments: 
+  /usr/local/bin/node /usr/local/bin/yarn
+
+PATH: 
+  /usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
+
+Yarn version: 
+  1.13.0
+
+Node version: 
+  10.13.0
+
+Platform: 
+  darwin x64
+
+Trace: 
+  Error: http://registry.npm.taobao.org/@angular/compiler/download/@angular/compiler-7.2.6.tgz: Request failed "500 Internal Server Error"
+      at ResponseError.ExtendableBuiltin (/usr/local/lib/node_modules/yarn/lib/cli.js:702:66)
+      at new ResponseError (/usr/local/lib/node_modules/yarn/lib/cli.js:808:124)
+      at Request.<anonymous> (/usr/local/lib/node_modules/yarn/lib/cli.js:66325:16)
+      at Request.emit (events.js:182:13)
+      at Request.module.exports.Request.onRequestResponse (/usr/local/lib/node_modules/yarn/lib/cli.js:130274:10)
+      at ClientRequest.emit (events.js:187:15)
+      at HTTPParser.parserOnIncomingClient (_http_client.js:555:21)
+      at HTTPParser.parserOnHeadersComplete (_http_common.js:109:17)
+      at Socket.socketOnData (_http_client.js:441:20)
+      at Socket.emit (events.js:182:13)
+
+npm manifest: 
+  {
+    "name": "coderiver-angular",
+    "version": "0.0.1",
+    "scripts": {
+      "ng": "ng",
+      "start": "ng serve",
+      "build": "ng build",
+      "test": "ng test",
+      "lint": "ng lint",
+      "e2e": "ng e2e"
+    },
+    "private": true,
+    "dependencies": {
+      "@angular/animations": "^7.2.1",
+      "@angular/cdk": "^7.2.1",
+      "@angular/common": "~7.2.0",
+      "@angular/compiler": "~7.2.0",
+      "@angular/core": "~7.2.0",
+      "@angular/forms": "~7.2.0",
+      "@angular/platform-browser": "~7.2.0",
+      "@angular/platform-browser-dynamic": "~7.2.0",
+      "@angular/router": "~7.2.0",
+      "core-js": "^2.5.4",
+      "ng-zorro-antd": "^7.0.0-rc.3",
+      "normalize.css": "^8.0.1",
+      "rxjs": "~6.3.3",
+      "tslib": "^1.9.0",
+      "zone.js": "~0.8.26"
+    },
+    "devDependencies": {
+      "@angular-devkit/build-angular": "~0.12.0",
+      "@angular/cli": "~7.2.1",
+      "@angular/compiler-cli": "~7.2.0",
+      "@angular/language-service": "~7.2.0",
+      "@types/jasmine": "~2.8.8",
+      "@types/jasminewd2": "~2.0.3",
+      "@types/node": "~8.9.4",
+      "codelyzer": "~4.5.0",
+      "jasmine-core": "~2.99.1",
+      "jasmine-spec-reporter": "~4.2.1",
+      "karma": "~3.1.1",
+      "karma-chrome-launcher": "~2.2.0",
+      "karma-coverage-istanbul-reporter": "~2.0.1",
+      "karma-jasmine": "~1.1.2",
+      "karma-jasmine-html-reporter": "^0.2.2",
+      "protractor": "~5.4.0",
+      "ts-node": "~7.0.0",
+      "tslint": "~5.11.0",
+      "typescript": "~3.2.2"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
